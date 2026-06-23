@@ -1,0 +1,28 @@
+node_modules/
+.nuxt/
+dist/
+.output/
+.env
+.env.*
+!.env.example
+
+# Python venv（VS Code 自动创建的虚拟环境）
+.venv/
+venv/
+__pycache__/
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Misc
+*.local

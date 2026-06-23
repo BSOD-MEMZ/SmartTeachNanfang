@@ -1,0 +1,88 @@
+<template>
+  <div class="page-container">
+    <!-- 返回链接 -->
+    <NuxtLink to="/articles" style="display: inline-flex; align-items: center; gap: 0.5rem; color: rgb(var(--mdui-color-primary)); text-decoration: none; margin-bottom: 1.5rem; font-size: 0.875rem;">
+      <mdui-icon name="arrow_back--outlined" style="font-size: 1rem;"></mdui-icon>
+      返回文章列表
+    </NuxtLink>
+
+    <!-- 文章卡片 -->
+    <mdui-card style="padding: 1.5rem;">
+      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+        <mdui-chip variant="filled">深度思考</mdui-chip>
+        <span style="font-size: 0.75rem; color: rgb(var(--mdui-color-on-surface) / 0.4);">2505 xxt</span>
+      </div>
+
+      <h1 style="font-size: 1.5rem; font-weight: 700; color: rgb(var(--mdui-color-on-surface)); margin-bottom: 1.5rem; line-height: 1.6;">
+        关于学校一体机管理制度的思考
+      </h1>
+
+      <div class="article-content">
+        <p style="font-size: 1.05rem;">
+          我是一名高一学生，同时也是一名有着七年经验的"老电教"。这些年来，我接触过许多设备，在每一台电脑上都倾注了不少心血。今天，我想借此机会，分享一些我对南方中学电脑管理制度的思考。
+        </p>
+
+        <h2 style="color:rgb(var(--mdui-color-secondary));">一体机不应只是辅助教学的工具</h2>
+
+        <p>
+          在走访多个班级后，我发现很多班主任将一体机简单视为播放PPT的工具，甚至像对待学生带手机一样，将其视作"洪水猛兽"。确实，一体机的设计初衷是辅助教学，但它同样能为枯燥的学习生活增添不少乐趣。
+        </p>
+
+        <p>
+          我们应当制止的是那些干扰正常教学秩序的行为，比如临近上课时还使用一体机打游戏、刷短视频。但在课间播放一些音乐来放松同学们的心情，我认为是完全可以接受的。
+        </p>
+
+        <p>
+          说到这，我特别感激我们班的班主任。他不仅信任我，还为我配备了一套键鼠，支持我对班级电脑进行优化。这份信任，让我感受到作为电教委员的责任与价值。
+        </p>
+
+        <p>
+          此外，我经常在第九节课听到广播里喊"某某班不要再玩电脑了"。老师们是如何发现这些情况的呢？原来，每间教室都安装了监控，只要看到有人站在大屏前就会发出警告。这种"一刀切"的管理方式确实有待商榷。记得有一次，一个班的电教委员为了剪辑班级合唱的音频，在教室里打开了Audition CS6，却遭到广播警告。当时办公室无人，他无法使用其他电脑，这种不分青红皂白的指责，着实让我们这些负责设备管理的同学感到心寒。
+        </p>
+
+        <h2 style="color:rgb(var(--mdui-color-primary));">允许合理使用电脑，促进学生自我成长</h2>
+
+        <p>
+          我认为，一个全面发展的人不应只局限于课本知识，而应广泛汲取各学科的养分，信息技术便是其中之一。曾经，我利用学校的一体机自学了 PyQt6。作为午托生，我有时会利用午休时间，在教室里通过B站学习编程并动手实践。当我成功编写出第一个 PyQt6 程序时，那种成就感至今难忘。
+        </p>
+
+        <p>
+          遗憾的是，我再也尝不到这种胜利的满足感了。年级组开始通过监控严格管理，我学习 AE、PS 的梦想也化为泡影。作为高中生，基本上没有什么时间使用家里的电脑，学校电脑就成为我唯一的信息化学习工具。虽然学校开设了丰富多彩的社团课程，让我们可以光明正大地学习 3D 建模等技能，但这类活动次数过于有限。而且，培优A班的同学由于课业繁重而无福享受。作为全年级排名倒数的学生，我反而"因祸得福"，能够拥有更多自主安排的时间来充实自己的课余生活。
+        </p>
+
+        <h2 style="color:rgb(var(--mdui-color-tertiary));">总结</h2>
+
+        <div class="highlight-box" style="background:rgb(var(--mdui-color-tertiary-container)); border-color:rgb(var(--mdui-color-tertiary));">
+          <p style="font-weight: 600; font-size: 1.05rem;">
+            <mdui-icon name="lightbulb--outlined" style="font-size: 1rem; vertical-align: middle;"></mdui-icon>
+            班级电脑并不是潜在违纪工具，而是一片促进学生自我成长的沃土。
+          </p>
+          <p>
+            希望学校能给予我们更多的学习机会，让我们得以在这台只有 4GB RAM 的老爷机上打开 VSCode，写下青春的第一行代码。
+          </p>
+        </div>
+      </div>
+
+      <!-- 分享 -->
+      <mdui-divider style="margin: 1.5rem 0;"></mdui-divider>
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+        <NuxtLink to="/articles">
+          <mdui-button variant="outlined">
+            <mdui-icon name="arrow_back--outlined" slot="icon"></mdui-icon>
+            返回文章列表
+          </mdui-button>
+        </NuxtLink>
+        <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgb(var(--mdui-color-on-surface) / 0.5);">
+          <mdui-icon name="mail--outlined" style="font-size: 1rem;"></mdui-icon>
+          xxt8582753@126.com
+        </div>
+      </div>
+    </mdui-card>
+  </div>
+</template>
+
+<script setup>
+useHead({
+  htmlAttrs: { 'data-page': 'articles-school-computer-management' }
+})
+</script>

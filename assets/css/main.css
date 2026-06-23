@@ -1,0 +1,225 @@
+/* ===== MDUI 2 + 自定义字体 + 活泼配色 ===== */
+
+/* 自定义字体 */
+@font-face {
+  font-family: 'FZLTY';
+  src: url('/res/fzlty.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JingNanBoBoHei';
+  src: url('/res/JingNanBoBoHei-Bold-2.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 亮色主题 — 默认（首页珊瑚色）SSR 备用 */
+:root {
+  --mdui-shape-corner-small: 0.5rem;
+  --mdui-shape-corner-medium: 0.75rem;
+  --mdui-shape-corner-large: 1rem;
+}
+
+/* 配色方案由 usePageTheme 在客户端通过 setColorScheme API 动态生成
+   每个页面都有完整的 Material 3 亮色/暗色双主题 */
+
+/* 校徽 — CSS mask 实现，可跟随主题变色 */
+.logo-mask {
+  display: inline-block;
+  mask-image: url('/res/logo.svg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url('/res/logo.svg');
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  background-color: currentColor;
+}
+
+body {
+  margin: 0;
+  padding: 0 !important; /* 防止 mdui-navigation-rail 自动添加 body 内边距造成多余间距 */
+  background: rgb(var(--mdui-color-surface));
+  color: rgb(var(--mdui-color-on-surface));
+  font-family: 'FZLTY', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* 大标题：荆南波波黑（本身极粗，无需 font-weight） */
+.page-hero h1,
+.article-content h1 {
+  font-family: 'JingNanBoBoHei', 'FZLTY', sans-serif;
+  font-weight: normal;
+}
+.page-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* 页面头部 */
+.page-hero {
+  text-align: center;
+  padding: 2rem 1rem 1.5rem;
+}
+.page-hero mdui-icon {
+  font-size: 3.5rem;
+  color: rgb(var(--mdui-color-primary));
+}
+.page-hero h1 {
+  margin: 0.75rem 0 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.page-hero p {
+  margin: 0;
+  color: rgb(var(--mdui-color-on-surface-variant));
+  font-size: 0.95rem;
+}
+
+/* section 标题 */
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+}
+
+/* 卡片网格 */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.75rem;
+}
+
+/* 文章内容 */
+.article-content {
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: rgb(var(--mdui-color-on-surface));
+  font-size: 0.95rem;
+}
+.article-content h2 {
+  font-size: 1.15rem;
+  color: rgb(var(--mdui-color-primary));
+  margin: 1.5rem 0 0.75rem;
+}
+.article-content p {
+  margin: 0.75rem 0;
+}
+
+/* 高亮块 */
+.highlight-box {
+  background: rgb(var(--mdui-color-primary-container));
+  color: rgb(var(--mdui-color-on-primary-container));
+  border-radius: var(--mdui-shape-corner-medium);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+
+/* ===== FAB 定位 ===== */
+.fab-back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* 暗色模式下平滑过渡 */
+mdui-card,
+mdui-list,
+mdui-button,
+mdui-icon,
+mdui-chip,
+mdui-top-app-bar,
+mdui-bottom-app-bar,
+mdui-navigation-rail,
+mdui-navigation-bar,
+mdui-navigation-drawer {
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+/* ===== Banner 轮播 ===== */
+.banner-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--mdui-shape-corner-large);
+  margin-bottom: 1.5rem;
+  aspect-ratio: 16 / 7;
+  background: rgb(var(--mdui-color-surface-container));
+}
+.banner-carousel:hover .banner-arrow {
+  opacity: 1;
+}
+.banner-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.2, 0, 0, 1);
+}
+.banner-slide {
+  flex: 0 0 100%;
+  position: relative;
+}
+.banner-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banner-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.55));
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.banner-dots {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 2;
+}
+.banner-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.banner-dot.active {
+  background: #fff;
+  transform: scale(1.4);
+}
+.banner-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: rgb(var(--mdui-color-on-primary-container)) !important;
+  background: rgb(var(--mdui-color-primary-container)) !important;
+  --mdui-shape-corner-full: 50%;
+}
+.banner-arrow.left {
+  left: 0.5rem;
+}
+.banner-arrow.right {
+  right: 0.5rem;
+}
