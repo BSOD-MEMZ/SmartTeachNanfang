@@ -83,6 +83,9 @@
             <div>
               <div style="font-weight:600; font-size:0.95rem">{{ w.title }}</div>
               <div style="font-size:0.8rem; color:rgb(var(--mdui-color-on-surface-variant)); margin-top:0.25rem">{{ w.author }}</div>
+              <div v-if="w.badge" style="margin-top:0.35rem">
+                <mdui-chip variant="suggestion" style="font-size:0.65rem; height:1.25rem">{{ w.badge }}</mdui-chip>
+              </div>
             </div>
           </div>
         </mdui-card>
@@ -171,15 +174,7 @@ onUnmounted(() => {
   if (bannerTimer) clearInterval(bannerTimer)
 })
 
-const works = [
-  { title: '基于Java的点名器', author: '2412电教自制', link: 'https://github.com/RenJun-ZH/rollcall', icon: 'my_location--outlined' },
-  { title: 'ExitBoard 放学倒计时', author: '2505电教自制', link: 'https://forum.smart-teach.cn/d/748', icon: 'schedule--outlined' },
-  { title: '360拖堂卫士', author: '2505电教自制', link: 'https://forum.smart-teach.cn/d/740', icon: 'shield--outlined' },
-  { title: 'EasiAuto 希沃白板自动登录', author: '2506电教自制', link: 'https://forum.smart-teach.cn/d/725', icon: 'rocket_launch--outlined' },
-  { title: 'SeewoPenTweaker', author: '2506电教自制', link: 'https://github.com/hxabcd/SeewoPenTweaker', icon: 'edit--outlined' },
-  { title: '友情链接：2506班电教', author: '友情链接', link: 'https://0xabcd.dev/', icon: 'link--outlined' },
-  { title: '友情链接：智教联盟', author: '友情链接', link: 'https://forum.smart-teach.cn/', icon: 'public--outlined' }
-]
+const { works } = useWorks()
 
 const tips = [
   { icon: 'cleaning_services--outlined', title: '希沃管家清理', content: '希沃管家会吞掉大量内存，且与SeewoPenTweaker冲突。卸载密码是 000000，卸载后不影响希沃白板和展台正常使用。' },

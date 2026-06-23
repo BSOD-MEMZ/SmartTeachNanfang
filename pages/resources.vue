@@ -10,127 +10,85 @@
     </div>
 
     <!-- 常用工具 -->
-    <mdui-list style="background:rgb(var(--mdui-color-secondary-container)); border-radius:1rem; padding:0.5rem 0;">
-      <mdui-list-subheader>
-        <mdui-icon name="build--outlined" slot="icon" style="color:rgb(var(--mdui-color-secondary));"></mdui-icon>
-        常用工具
-      </mdui-list-subheader>
-
-      <mdui-list-item
-        headline="ClassIsland 纯净版"
-        description="课程表软件，高一很多班都在用。官方纯净版，需自行配置（技术要求较高）"
-        href="https://classisland.tech/"
-        target="_blank">
-        <mdui-icon name="calendar_month--outlined" slot="icon" style="color:rgb(var(--mdui-color-secondary));"></mdui-icon>
-        <mdui-chip slot="end-icon" variant="filled">官方</mdui-chip>
-      </mdui-list-item>
-
-      <mdui-list-item
-        headline="ClassIsland 2505配置版"
-        description="已配置好的版本，内含南中秋季/春冬季时间表。但配置文件有一些可能令老师不适的内容，请谨慎使用"
-        href="https://www.123865.com/s/LQJuVv-eSeNd"
-        target="_blank">
-        <mdui-icon name="calendar_month--outlined" slot="icon" style="color:rgb(var(--mdui-color-secondary));"></mdui-icon>
-        <mdui-chip slot="end-icon" variant="tonal">不推荐</mdui-chip>
-      </mdui-list-item>
-
-      <mdui-list-item
-        headline="ClassIsland 2506配置版（推荐）"
-        description="已配置好的版本，内含南中时间表，只保留核心功能，干净清爽"
-        href="https://www.123865.com/s/LQJuVv-BieNd"
-        target="_blank">
-        <mdui-icon name="calendar_month--outlined" slot="icon" style="color:rgb(var(--mdui-color-secondary));"></mdui-icon>
-        <mdui-chip slot="end-icon" variant="filled">推荐</mdui-chip>
-      </mdui-list-item>
-
-      <mdui-list-item
-        headline="ICC CE"
-        description="屏幕批注软件，吊打希沃自带PPT小工具（Bug 有点多）"
-        href="https://www.123865.com/s/LQJuVv-tSeNd"
-        target="_blank">
-        <mdui-icon name="draw--outlined" slot="icon" style="color:rgb(var(--mdui-color-secondary));"></mdui-icon>
-        <mdui-chip slot="end-icon" variant="filled">实用</mdui-chip>
-      </mdui-list-item>
-
-      <mdui-list-item
-        headline="ClassWork 作业板（网页端）"
-        description="打开即用的作业管理工具"
-        href="https://classworks.wuyuan.dev/"
-        target="_blank">
-        <mdui-icon name="assignment--outlined" slot="icon" style="color:rgb(var(--mdui-color-secondary));"></mdui-icon>
-        <mdui-chip slot="end-icon" variant="filled">即开即用</mdui-chip>
-      </mdui-list-item>
-    </mdui-list>
+    <h3 class="section-heading" style="color:rgb(var(--mdui-color-secondary))">
+      <mdui-icon name="build--outlined"></mdui-icon>常用工具
+    </h3>
+    <div class="card-grid" style="margin-bottom:1.5rem">
+      <mdui-card
+        v-for="item in commonTools"
+        :key="item.title"
+        clickable
+        :href="item.href"
+        :target="item.download ? undefined : '_blank'"
+        :download="item.download || undefined"
+        style="background:rgb(var(--mdui-color-secondary-container))"
+      >
+        <div style="padding:1rem; display:flex; align-items:flex-start; gap:0.75rem">
+          <mdui-icon :name="item.icon" style="font-size:2rem; color:rgb(var(--mdui-color-secondary)); flex-shrink:0"></mdui-icon>
+          <div style="min-width:0">
+            <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap">
+              <span style="font-weight:600; font-size:0.95rem">{{ item.title }}</span>
+              <mdui-chip variant="filled" style="font-size:0.65rem; height:1.25rem">{{ item.label }}</mdui-chip>
+            </div>
+            <div style="font-size:0.8rem; color:rgb(var(--mdui-color-on-surface-variant)); margin-top:0.25rem; line-height:1.4">{{ item.desc }}</div>
+          </div>
+        </div>
+      </mdui-card>
+    </div>
 
     <!-- 辅助工具 -->
-    <mdui-list style="background:rgb(var(--mdui-color-tertiary-container)); border-radius:1rem; padding:0.5rem 0;">
-      <mdui-list-subheader>
-        <mdui-icon name="construction--outlined" slot="icon" style="color:rgb(var(--mdui-color-tertiary));"></mdui-icon>
-        辅助工具
-      </mdui-list-subheader>
-
-      <mdui-list-item
-        headline="Geek"
-        description="强制删除流氓软件"
-        href="/files/res/geek.exe"
-        download>
-        <mdui-icon name="delete--outlined" slot="icon" style="color:rgb(var(--mdui-color-tertiary));"></mdui-icon>
-        <mdui-chip slot="end-icon" variant="filled">必备</mdui-chip>
-      </mdui-list-item>
-
-      <mdui-list-item
-        headline="Everything"
-        description="快速搜索文件，比Windows自带搜索快N倍"
-        href="https://www.voidtools.com/zh-cn/downloads/"
-        target="_blank">
-        <mdui-icon name="search--outlined" slot="icon" style="color:rgb(var(--mdui-color-tertiary));"></mdui-icon>
-        <mdui-chip slot="end-icon" variant="filled">推荐</mdui-chip>
-      </mdui-list-item>
-
-      <mdui-list-item
-        headline="Windows Update Blocker"
-        description="禁用烦人的 Windows 自动更新"
-        href="/files/res/WindowsUpdateBlocker_1.8.0.0.exe"
-        download>
-        <mdui-icon name="block--outlined" slot="icon" style="color:rgb(var(--mdui-color-tertiary));"></mdui-icon>
-        <mdui-chip slot="end-icon" variant="filled">实用</mdui-chip>
-      </mdui-list-item>
-
-      <mdui-list-item
-        headline="HEU KMS"
-        description="懂的都懂 😏"
-        href="https://www.123865.com/s/LQJuVv-ZleNd"
-        target="_blank">
-        <mdui-icon name="key--outlined" slot="icon" style="color:rgb(var(--mdui-color-tertiary));"></mdui-icon>
-        <mdui-chip slot="end-icon" variant="tonal">懂的都懂</mdui-chip>
-      </mdui-list-item>
-    </mdui-list>
+    <h3 class="section-heading" style="color:rgb(var(--mdui-color-tertiary))">
+      <mdui-icon name="construction--outlined"></mdui-icon>辅助工具
+    </h3>
+    <div class="card-grid" style="margin-bottom:1.5rem">
+      <mdui-card
+        v-for="item in auxTools"
+        :key="item.title"
+        clickable
+        :href="item.href"
+        :target="item.download ? undefined : '_blank'"
+        :download="item.download || undefined"
+        style="background:rgb(var(--mdui-color-tertiary-container))"
+      >
+        <div style="padding:1rem; display:flex; align-items:flex-start; gap:0.75rem">
+          <mdui-icon :name="item.icon" style="font-size:2rem; color:rgb(var(--mdui-color-tertiary)); flex-shrink:0"></mdui-icon>
+          <div style="min-width:0">
+            <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap">
+              <span style="font-weight:600; font-size:0.95rem">{{ item.title }}</span>
+              <mdui-chip variant="filled" style="font-size:0.65rem; height:1.25rem">{{ item.label }}</mdui-chip>
+            </div>
+            <div style="font-size:0.8rem; color:rgb(var(--mdui-color-on-surface-variant)); margin-top:0.25rem; line-height:1.4">{{ item.desc }}</div>
+          </div>
+        </div>
+      </mdui-card>
+    </div>
 
     <!-- 更多 -->
-    <mdui-list style="background:rgb(var(--mdui-color-secondary-container)); border-radius:1rem; padding:0.5rem 0;">
-      <mdui-list-subheader>
-        <mdui-icon name="more_horiz--outlined" slot="icon" style="color:rgb(var(--mdui-color-secondary));"></mdui-icon>
-        更多
-      </mdui-list-subheader>
-
-      <mdui-list-item
-        headline="dotnet runtime"
-        description="如果 ClassIsland 需要装 dotnet 但微软官网打不开，可以先用这个"
-        href="https://www.123865.com/s/LQJuVv-iSeNd"
-        target="_blank">
-        <mdui-icon name="settings--outlined" slot="icon" style="color:rgb(var(--mdui-color-secondary));"></mdui-icon>
-        <mdui-chip slot="end-icon" variant="filled">备用</mdui-chip>
-      </mdui-list-item>
-
-      <mdui-list-item
-        headline="K-Lite Codec Pack"
-        description="视频放不出来？装这个解码器包"
-        href="https://www.123865.com/s/LQJuVv-zSeNd"
-        target="_blank">
-        <mdui-icon name="movie--outlined" slot="icon" style="color:rgb(var(--mdui-color-secondary));"></mdui-icon>
-        <mdui-chip slot="end-icon" variant="filled">解码</mdui-chip>
-      </mdui-list-item>
-    </mdui-list>
+    <h3 class="section-heading" style="color:rgb(var(--mdui-color-secondary))">
+      <mdui-icon name="more_horiz--outlined"></mdui-icon>更多
+    </h3>
+    <div class="card-grid" style="margin-bottom:3rem">
+      <mdui-card
+        v-for="item in moreTools"
+        :key="item.title"
+        clickable
+        :href="item.href"
+        :target="item.download ? undefined : '_blank'"
+        :download="item.download || undefined"
+        style="background:rgb(var(--mdui-color-secondary-container))"
+      >
+        <div style="padding:1rem; display:flex; align-items:flex-start; gap:0.75rem">
+          <mdui-icon :name="item.icon" style="font-size:2rem; color:rgb(var(--mdui-color-secondary)); flex-shrink:0"></mdui-icon>
+          <div style="min-width:0">
+            <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap">
+              <span style="font-weight:600; font-size:0.95rem">{{ item.title }}</span>
+              <mdui-chip variant="filled" style="font-size:0.65rem; height:1.25rem">{{ item.label }}</mdui-chip>
+            </div>
+            <div style="font-size:0.8rem; color:rgb(var(--mdui-color-on-surface-variant)); margin-top:0.25rem; line-height:1.4">{{ item.desc }}</div>
+          </div>
+        </div>
+      </mdui-card>
+    </div>
   </div>
 </template>
 
@@ -138,4 +96,24 @@
 useHead({
   htmlAttrs: { 'data-page': 'resources' }
 })
+
+const commonTools = [
+  { title: 'ClassIsland 纯净版', desc: '课程表软件，高一很多班都在用。官方纯净版，需自行配置', icon: 'calendar_month--outlined', label: '官方', href: 'https://classisland.tech/' },
+  { title: 'ClassIsland 2505配置版', desc: '内含南中秋季/春冬季时间表，但配置可能令老师不适，请谨慎使用', icon: 'calendar_month--outlined', label: '不推荐', href: 'https://www.123865.com/s/LQJuVv-eSeNd' },
+  { title: 'ClassIsland 2506配置版', desc: '内含南中时间表，只保留核心功能，干净清爽', icon: 'calendar_month--outlined', label: '推荐', href: 'https://www.123865.com/s/LQJuVv-BieNd' },
+  { title: 'ICC CE', desc: '屏幕批注软件，吊打希沃自带PPT小工具（Bug有点多）', icon: 'draw--outlined', label: '实用', href: 'https://www.123865.com/s/LQJuVv-tSeNd' },
+  { title: 'ClassWork 作业板', desc: '打开即用的作业管理工具', icon: 'assignment--outlined', label: '即开即用', href: 'https://classworks.wuyuan.dev/' },
+]
+
+const auxTools = [
+  { title: 'Geek', desc: '强制删除流氓软件', icon: 'delete--outlined', label: '必备', href: '/files/res/geek.exe', download: true },
+  { title: 'Everything', desc: '快速搜索文件，比Windows自带搜索快N倍', icon: 'search--outlined', label: '推荐', href: 'https://www.voidtools.com/zh-cn/downloads/' },
+  { title: 'Windows Update Blocker', desc: '禁用烦人的 Windows 自动更新', icon: 'block--outlined', label: '实用', href: '/files/res/WindowsUpdateBlocker_1.8.0.0.exe', download: true },
+  { title: 'HEU KMS', desc: '懂的都懂 😏', icon: 'key--outlined', label: '懂的都懂', href: 'https://www.123865.com/s/LQJuVv-ZleNd' },
+]
+
+const moreTools = [
+  { title: 'dotnet runtime', desc: 'ClassIsland 依赖，微软官网打不开时的备用下载', icon: 'settings--outlined', label: '备用', href: 'https://www.123865.com/s/LQJuVv-iSeNd' },
+  { title: 'K-Lite Codec Pack', desc: '视频放不出来？装这个解码器包', icon: 'movie--outlined', label: '解码', href: 'https://www.123865.com/s/LQJuVv-zSeNd' },
+]
 </script>
