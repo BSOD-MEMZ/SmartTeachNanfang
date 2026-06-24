@@ -125,13 +125,22 @@ body {
   margin: 1rem 0;
 }
 
-/* ===== FAB 定位 ===== */
+/* ===== 返回顶部按钮 ===== */
 .fab-back-to-top {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
   z-index: 50;
-  transition: opacity 0.3s, transform 0.3s;
+  width: 7rem;
+  height: 7rem;
+  cursor: pointer;
+  border-radius: var(--mdui-shape-corner-medium);
+  box-shadow: var(--mdui-elevation-3);
+  transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.fab-back-to-top:hover {
+  box-shadow: var(--mdui-elevation-4);
+  transform: scale(1.05);
 }
 
 /* 暗色模式下平滑过渡 */

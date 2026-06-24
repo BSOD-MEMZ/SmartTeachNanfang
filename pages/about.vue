@@ -8,7 +8,7 @@
     </div>
 
     <!-- 网站简介 -->
-    <mdui-card style="padding:1.5rem; margin-bottom:1rem">
+    <mdui-card clickable style="padding:1.5rem; margin-bottom:1rem">
       <h3 class="section-heading" style="color:rgb(var(--mdui-color-primary)); margin-top:0">
         <mdui-icon name="school--outlined"></mdui-icon>网站简介
       </h3>
@@ -21,7 +21,7 @@
     <!-- 三列卡片 -->
     <div class="card-grid" style="margin-bottom:3rem">
       <!-- 联系方式 -->
-      <mdui-card style="padding:1.25rem 1rem">
+      <mdui-card clickable style="padding:1.25rem 1rem">
         <h3 class="section-heading" style="color:rgb(var(--mdui-color-tertiary)); margin-top:0">
           <mdui-icon name="alternate_email--outlined"></mdui-icon>联系方式
         </h3>
@@ -51,7 +51,7 @@
       </mdui-card>
 
       <!-- 技术栈 -->
-      <mdui-card style="padding:1.25rem 1rem">
+      <mdui-card clickable style="padding:1.25rem 1rem">
         <h3 class="section-heading" style="color:rgb(var(--mdui-color-secondary)); margin-top:0">
           <mdui-icon name="terminal--outlined"></mdui-icon>技术栈
         </h3>
@@ -65,7 +65,7 @@
       </mdui-card>
 
       <!-- 作者列表 -->
-      <mdui-card style="padding:1.25rem 1rem">
+      <mdui-card clickable style="padding:1.25rem 1rem">
         <h3 class="section-heading" style="color:rgb(var(--mdui-color-primary)); margin-top:0">
           <mdui-icon name="people--outlined"></mdui-icon>作者
         </h3>

@@ -13,7 +13,7 @@
         style="width:2.5rem; height:2.5rem; color:rgb(var(--mdui-color-on-surface)); vertical-align:middle; margin-right:0.5rem; cursor:pointer; flex-shrink:0"
         @click="navigateTo('/')"
       ></span>
-      <mdui-top-app-bar-title @click="navigateTo('/')" style="cursor:pointer; font-family:'JingNanBoBoHei','FZLTY',sans-serif">株洲市南方中学 电教委员专题网站</mdui-top-app-bar-title>
+      <mdui-top-app-bar-title @click="navigateTo('/')" style="cursor:pointer; font-family:'JingNanBoBoHei','FZLTY',sans-serif">SmartTeachNanfang - 智教南方</mdui-top-app-bar-title>
       <div style="flex:1"></div>
       <!-- 深浅色切换 -->
       <mdui-button-icon
@@ -61,14 +61,14 @@
       </div>
     </div>
 
-    <!-- 返回顶部 FAB -->
-    <mdui-fab
+    <!-- 返回顶部 -->
+    <img
       v-show="showFab"
-      icon="keyboard_arrow_up--outlined"
+      src="/res/top.png"
       class="fab-back-to-top"
-      variant="tertiary"
-      @click="scrollToTop">
-    </mdui-fab>
+      alt="返回顶部"
+      @click="scrollToTop"
+    />
   </div>
 </template>
 
@@ -88,6 +88,7 @@ const navItems = [
   { label: '资源', path: '/resources', icon: 'folder' },
   { label: '作品', path: '/showcase', icon: 'palette' },
   { label: '文章', path: '/articles', icon: 'article' },
+  { label: '学习', path: '/learn', icon: 'menu_book' },
   { label: '宣传', path: '/promo', icon: 'campaign' },
   { label: '导航', path: '/nav', icon: 'link' },
   { label: '关于', path: '/about', icon: 'info' }

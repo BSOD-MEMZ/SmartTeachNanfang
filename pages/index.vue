@@ -125,13 +125,17 @@
       <h3 class="section-heading" style="color:rgb(var(--mdui-color-secondary))">
         <mdui-icon name="lightbulb--outlined" style="color:rgb(var(--mdui-color-secondary))"></mdui-icon>你知道吗
       </h3>
-      <mdui-list style="border-radius:var(--mdui-shape-corner-medium); margin-bottom:3rem; background:rgb(var(--mdui-color-secondary-container))">
+      <mdui-list style="border-radius:var(--mdui-shape-corner-medium); margin-bottom:1rem; background:rgb(var(--mdui-color-secondary-container))">
         <mdui-list-item v-for="tip in tips" :key="tip.title" noninteractive :headline="tip.title">
           <mdui-icon slot="icon" :name="tip.icon" style="color:rgb(var(--mdui-color-secondary))"></mdui-icon>
           <div slot="description" style="white-space:normal">{{ tip.content }}</div>
         </mdui-list-item>
       </mdui-list>
-
+      <div style="text-align:center; margin-bottom:1rem">
+        <mdui-button href="/learn" variant="outlined">
+          查看全部教学<mdui-icon slot="end-icon" name="arrow_forward--outlined"></mdui-icon>
+        </mdui-button>
+      </div>
     </div>
   </div>
 </template>
@@ -146,6 +150,7 @@ const banners = [
   { src: '/res/banner1.jpg', alt: 'Banner 1', title: '2505 xxt8582753 - ClassIsland娱乐功能插件，让同学眼前一亮，老师眼前一黑。' },
   { src: '/res/banner2.png', alt: 'Banner 2', title: '2506 AbCd - 一款自动登录希沃白板的小工具，通过模拟登录流程来实现自动登录。' },
   { src: '/res/banner3.jpg', alt: 'Banner 3', title: '欢迎入群讨论，电教委员和普通技术爱好者都欢迎，科技高中就靠我们啦（？' },
+  { src: '/res/banner4.jpg', alt: 'Banner 4', title: '哪有这么好的免费服务器啊' },
 ]
 
 function nextBanner() {

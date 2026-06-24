@@ -8,7 +8,7 @@
     </div>
 
     <!-- 宣传材料 -->
-    <mdui-card style="padding: 1.5rem; text-align: center;">
+    <mdui-card clickable style="padding: 1.5rem; text-align: center;">
       <h2 style="font-size: 1.25rem; font-weight: 600; color: rgb(var(--mdui-color-on-surface)); margin: 0 0 1rem;">2025年9月宣传资料</h2>
 
       <img

@@ -8,6 +8,7 @@ const pageColors: Record<string, string> = {
   '/promo': '#3B82F6',      // 宣传 — 宝蓝
   '/nav': '#10B981',        // 导航 — 翠绿
   '/about': '#6366F1',      // 关于 — 靛蓝
+  '/learn': '#0EA5E9',      // 学习 — 天蓝
 }
 
 // 文章相关页面共用琥珀色

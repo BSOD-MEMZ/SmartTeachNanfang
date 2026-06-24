@@ -1,0 +1,230 @@
+<template>
+  <div class="page-container">
+    <!-- 页头 -->
+    <div class="page-hero">
+      <mdui-icon name="menu_book--outlined" style="color:rgb(var(--mdui-color-secondary));"></mdui-icon>
+      <h1>学习园地</h1>
+      <p>从入门到熟练，做一名靠谱的电教委员</p>
+    </div>
+
+    <!-- ====== 第一部分：作为电教委员，我们应做什么 ====== -->
+    <h3 class="section-heading" style="color:rgb(var(--mdui-color-primary))">
+      <mdui-icon name="assignment--outlined" style="color:rgb(var(--mdui-color-primary))"></mdui-icon>作为电教委员，我们应做什么
+    </h3>
+    <div class="card-grid" style="margin-bottom:2rem">
+      <mdui-card v-for="duty in duties" :key="duty.title" clickable style="background:rgb(var(--mdui-color-primary-container))">
+        <div style="padding:1.25rem">
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem">
+            <mdui-icon :name="duty.icon" style="font-size:2rem; color:rgb(var(--mdui-color-primary)); flex-shrink:0"></mdui-icon>
+            <div style="font-weight:600; font-size:1rem; color:rgb(var(--mdui-color-on-primary-container))">{{ duty.title }}</div>
+          </div>
+          <ul style="margin:0; padding-left:1.25rem; font-size:0.85rem; color:rgb(var(--mdui-color-on-primary-container)); line-height:1.9">
+            <li v-for="(item, i) in duty.items" :key="i">{{ item }}</li>
+          </ul>
+        </div>
+      </mdui-card>
+    </div>
+
+    <!-- ====== 第二部分：常见故障解决方法 ====== -->
+    <h3 class="section-heading" style="color:rgb(var(--mdui-color-tertiary))">
+      <mdui-icon name="build--outlined" style="color:rgb(var(--mdui-color-tertiary))"></mdui-icon>常见故障解决方法
+    </h3>
+
+    <div style="display:flex; flex-direction:column; gap:0.75rem; margin-bottom:3rem">
+      <mdui-card
+        v-for="(qa, idx) in qas"
+        :key="idx"
+        clickable
+        @click="toggleQA(idx)"
+        :style="{
+          background: expandedSet.has(idx) ? 'rgb(var(--mdui-color-tertiary-container))' : 'rgb(var(--mdui-color-surface-container))',
+          transition: 'background 0.3s, box-shadow 0.3s'
+        }"
+      >
+        <div style="padding:1rem 1.25rem">
+          <div style="display:flex; align-items:flex-start; gap:0.75rem">
+            <mdui-icon
+              :name="expandedSet.has(idx) ? 'expand_less' : 'expand_more'"
+              style="flex-shrink:0; color:rgb(var(--mdui-color-tertiary))"
+            ></mdui-icon>
+            <div style="flex:1; min-width:0">
+              <div style="font-weight:600; font-size:0.95rem; color:rgb(var(--mdui-color-on-surface))">{{ qa.q }}</div>
+              <div
+                v-show="expandedSet.has(idx)"
+                style="margin-top:0.75rem; line-height:1.8; font-size:0.9rem; color:rgb(var(--mdui-color-on-surface-variant))"
+              >
+                <div v-if="qa.a" style="margin-bottom:0.5rem">{{ qa.a }}</div>
+                <div v-if="qa.steps" style="display:flex; flex-direction:column; gap:0.35rem">
+                  <div
+                    v-for="(step, si) in qa.steps"
+                    :key="si"
+                    style="display:flex; align-items:flex-start; gap:0.5rem; background:rgb(var(--mdui-color-surface-container-low)); border-radius:var(--mdui-shape-corner-small); padding:0.5rem 0.75rem"
+                  >
+                    <span style="flex-shrink:0; width:1.4rem; height:1.4rem; display:inline-flex; align-items:center; justify-content:center; background:rgb(var(--mdui-color-tertiary)); color:rgb(var(--mdui-color-on-tertiary)); border-radius:50%; font-size:0.7rem; font-weight:700">{{ si + 1 }}</span>
+                    <span>{{ step }}</span>
+                  </div>
+                </div>
+                <div v-if="qa.tip" style="margin-top:0.6rem; background:rgb(var(--mdui-color-secondary-container)); color:rgb(var(--mdui-color-on-secondary-container)); border-radius:var(--mdui-shape-corner-small); padding:0.5rem 0.75rem">
+                  <mdui-icon name="lightbulb--outlined" style="font-size:1rem; vertical-align:middle; margin-right:0.35rem; color:rgb(var(--mdui-color-secondary))"></mdui-icon>
+                  {{ qa.tip }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mdui-card>
+    </div>
+  </div>
+</template>
+
+<script setup>
+useHead({
+  htmlAttrs: { 'data-page': 'learn' }
+})
+
+const expandedSet = ref(new Set())
+
+function toggleQA(idx) {
+  const newSet = new Set(expandedSet.value)
+  if (newSet.has(idx)) {
+    newSet.delete(idx)
+  } else {
+    newSet.add(idx)
+  }
+  expandedSet.value = newSet
+}
+
+// ====== 电教委员职责 ======
+const duties = [
+  {
+    icon: 'power_settings_new--outlined',
+    title: '课前准备',
+    items: [
+      '每节课前提前 2 分钟到达教室，打开一体机和音响设备',
+      '检查网络是否连通、希沃白板是否正常登录',
+      '确认投影仪 / 大屏显示正常，画面清晰、无偏色',
+      '帮老师提前打开课件，确保能正常播放',
+    ],
+  },
+  {
+    icon: 'cleaning_services--outlined',
+    title: '日常维护',
+    items: [
+      '定期清理桌面多余文件，保持 C 盘有 8GB 以上剩余空间（清理方法看下面）',
+      '及时卸载捆绑软件和弹窗广告程序',
+    ],
+  },
+  {
+    icon: 'support_agent--outlined',
+    title: '协助老师',
+    items: [
+      '耐心帮老师解决一体机操作问题（切换输入源、调节音量等）',
+      '老师使用中遇到故障时快速判断问题类型并尝试当场解决',
+      '帮不熟悉电脑的老师完成简单操作（下载文件、打印文档等）',
+      '态度友好，不要在老师面前表现出不耐烦',
+    ],
+  },
+  {
+    icon: 'update--outlined',
+    title: '软件管理',
+    items: [
+      '关注希沃白板、ClassIsland 等常用软件的更新，及时升级',
+      '班内电脑软件尽量保持统一版本，避免兼容性问题',
+      '安装新软件前先查杀病毒，不从不知名下载站获取安装包',
+      '重要资料和课件建议云盘 + U 盘双重备份',
+    ],
+  },
+  {
+    icon: 'campaign--outlined',
+    title: '信息传达',
+    items: [
+      '关注学校信息中心和电教群的通知，及时了解新的设备使用规范',
+      '向班上同学科普正确使用一体机的注意事项（不乱装软件等）',
+      '发现一体机硬件故障（屏幕裂、无法开机等）第一时间报告信息中心',
+      '积极参与电教委员交流群，分享经验和求助',
+    ],
+  },
+  {
+    icon: 'school--outlined',
+    title: '自我提升',
+    items: [
+      '学习基本的 Windows 故障排查技巧（任务管理器、设备管理器等）',
+      '了解常见硬件接口和线缆（HDMI、VGA、音频线、网线）',
+      '关注本站"学习园地"的常见问题，积累经验',
+      '遇到不懂的问题善用搜索，或在电教群中请教',
+    ],
+  },
+]
+
+// ====== 常见故障 ======
+const qas = [
+  {
+    q: '一体机开机后屏幕黑屏，显示无信号',
+    a: '这是最常遇到的问题之一，通常不是硬件故障。',
+    steps: [
+      '检查一体机输入源按钮，确认选中了正确的输入源（PC）',
+      '轻触屏幕，如果是Windows自动休眠，建议关闭',
+    ],
+    tip: '大部分"黑屏"是输入源被误切造成的。',
+  },
+
+  {
+    q: '一体机触屏失灵或触摸不准',
+    steps: [
+      '先用干净的软布擦拭屏幕四周的边框',
+      '检查屏幕角落是否有异物卡在触摸框感应区',
+      '检查屏幕上是否有蚊虫',
+    ],
+  },
+  {
+    q: '开机要等很久',
+    steps: [
+      '按 Ctrl+Shift+Esc 打开任务管理器 → 启动选项卡，禁用不必要的开机自启程序',
+    ],
+  },
+  {
+    q: '教室电脑运行特别慢，电脑频繁弹广告窗口，影响上课',
+    steps: [
+      '之前看到一个鬼，他妈的装个PVZ杂交版，结果还下的盗版，捆绑一堆流氓软件，首先不建议在学校电脑上装游戏，就算装也不要装盗版游戏',
+      '打开控制面板 → 程序和功能，按安装时间排序，卸载最近安装的可疑软件',
+      '删掉电脑上的杀毒软件，金山毒霸，360，火绒都不要有，首先现在的电脑没那么容易中毒，其次这些杀毒软件的后台扫描很吃性能的！',
+    ],
+    tip: '预防胜于治疗：不要从非官网下载软件，安装时看清楚勾选框，拒绝捆绑安装。',
+  },
+  {
+    q: '希沃白板登录不了，一直显示网络错误',
+    steps: [
+      '首先确认教室网络正常（打开浏览器访问任意网站测试）',
+      '如果是南方土豆交换机发力了，让老师开个热点，你带了手机也可以自己开个热点',
+      '如果班上有人用了VPN，揍他一顿，然后打开控制面板->网络和Internet->Internet属性->连接->局域网设置，取消勾选为 LAN 使用代理服务器，然后确定',
+    ],
+    
+  },
+  {
+    q: 'PPT 打开提示要修复',
+    steps: [
+      '只有Microsoft PowerPoint有这个问题，解决它最直接的方法是安装WPS，但我相信大家都不喜欢WPS',
+      '点击修复，然后等，一直等，不要取消',
+    ],
+    tip: '如果你发现某个老师的课件总是这样，可以让他先发你一份，提前修好，不占用上课时间。',
+  },
+  {
+    q: '教室无法上网',
+    steps: [
+      '彻底关机再打开，为什么嘞，因为有些老师上完课弹出U盘可能弹错了，把USB无线网卡弹掉了。',
+      '如果不是本机网卡问题，那就只能是学校垃圾WiFi发力了。'
+    ],
+  },
+
+  {
+    q: '清理C盘',
+    steps: [
+      '先试试卸载不需要的软件',
+      '按下Win+X，点击PowerShell（管理员），输入powercfg -h off，按回车',
+      '按下Win+R，输入SystemPropertiesPerformance.exe，弹出的性能选项点高级，虚拟内存点更改，取消勾选自动管理的所有驱动器分页文件大小（如果已经取消勾选了就不用管）点下列表里的C:，选中无分页文件，点下设置；再点下D:，选中系统管理的大小，点下设置，然后点下确定。',
+      '还有一个办法，去网上装一个Dism++，用那个释放空间功能，那个是真的牛逼，能清出十多个G，你大可自己搜搜使用方法',
+    ],
+    tip: '这个操作较为复杂，建议让群里经过认证的技术人员辅助操作',
+  },
+]
+</script>

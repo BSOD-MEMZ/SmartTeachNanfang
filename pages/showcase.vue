@@ -8,7 +8,7 @@
     </div>
 
     <!-- 投稿提示 -->
-    <mdui-card style="margin-bottom: 1.5rem; text-align: center;">
+    <mdui-card clickable style="margin-bottom: 1.5rem; text-align: center;">
       <p style="font-size: 0.875rem; color: rgb(var(--mdui-color-on-surface) / 0.6); padding: 1rem;">
         <mdui-icon name="lightbulb--outlined" style="font-size: 1rem; vertical-align: middle;"></mdui-icon>
         想投稿文章、作品吗？
