@@ -89,7 +89,8 @@ const navItems = [
   { label: '作品', path: '/showcase', icon: 'palette' },
   { label: '文章', path: '/articles', icon: 'article' },
   { label: '宣传', path: '/promo', icon: 'campaign' },
-  { label: '导航', path: '/nav', icon: 'link' }
+  { label: '导航', path: '/nav', icon: 'link' },
+  { label: '关于', path: '/about', icon: 'info' }
 ]
 
 function openDrawer() {

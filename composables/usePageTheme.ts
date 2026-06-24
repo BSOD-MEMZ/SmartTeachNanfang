@@ -7,6 +7,7 @@ const pageColors: Record<string, string> = {
   '/showcase': '#8B5CF6',   // 作品 — 紫罗兰
   '/promo': '#3B82F6',      // 宣传 — 宝蓝
   '/nav': '#10B981',        // 导航 — 翠绿
+  '/about': '#6366F1',      // 关于 — 靛蓝
 }
 
 // 文章相关页面共用琥珀色

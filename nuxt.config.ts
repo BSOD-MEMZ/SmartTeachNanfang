@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2026-06-23',
   devtools: { enabled: true },
-  modules: [],
+  modules: ['@nuxt/content'],
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => tag.startsWith('mdui-')

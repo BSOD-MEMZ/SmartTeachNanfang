@@ -18,7 +18,7 @@ export interface LinkItem {
 
 export function useWorks() {
   const works: WorkItem[] = [
-    { title: 'EasiAuto 希沃白板自动登录', desc: '通过模拟点击，图像识别，进程注入等方式自动登录希沃白板', author: '2506 电教 AbCd 自制', link: 'https://forum.smart-teach.cn/d/725', icon: 'rocket_launch--outlined', badge: '中小学生数字素养提升实践活动省赛入围作品' },
+    { title: 'EasiAuto 希沃白板自动登录', desc: '通过模拟点击，图像识别，进程注入等方式自动登录希沃白板', author: '2506 电教 AbCd 自制', link: 'https://easiauto.0xabcd.dev/', icon: 'rocket_launch--outlined', badge: '中小学生数字素养提升实践活动省赛入围作品' },
     { title: 'QQListener 班级群监听器', desc: '让每一条重要通知都能被听见 班级群消息监听器', author: '2505 电教 xxt8582753 自制', link: 'https://xxtsoft.top/support/qqlistener/', icon: 'volume_up--outlined', badge: '中小学生数字素养提升实践活动国赛入围作品' },
     { title: 'EntertainingIsland 娱乐插件', desc: '防巡堂警报、下课倒计时、小说阅读器、老师口头禅记录、RSS新闻、拿老师的头当课程表、能作弊的点名器、每日宜忌运势等功能。', author: '2505 电教 xxt8582753 自制', link: 'https://forum.smart-teach.cn/d/2042-ni-de-ke-biao-bi-ni-xiang-xiang-de-geng-hao-wan-classislandcha-jian-entertainingislandfa-bu', icon: 'star--outlined'},
     { title: '点名器', desc: '基于Java的随机点名工具', author: '2412 电教 RenJun 自制', link: 'https://github.com/RenJun-ZH/rollcall', icon: 'my_location--outlined' },
