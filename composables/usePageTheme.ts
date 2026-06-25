@@ -11,11 +11,7 @@ const pageColors: Record<string, string> = {
   '/learn': '#0EA5E9',      // 学习 — 天蓝
 }
 
-// 文章相关页面共用琥珀色
-const articlesColor = '#F59E0B'
-
 function resolveColor(path: string): string {
-  if (path.startsWith('/articles')) return articlesColor
   return pageColors[path] || pageColors['/']
 }
 

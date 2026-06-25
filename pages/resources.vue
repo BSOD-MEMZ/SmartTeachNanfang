@@ -96,8 +96,8 @@
 useHead({
   htmlAttrs: { 'data-page': 'resources' }
 })
-
 const commonTools = [
+  { title: 'Google Chrome', desc: '有一个Edge就够了，除非你想另外装一个浏览器', icon: 'calendar_month--outlined', label: '官方', href: 'https://classisland.tech/' },
   { title: 'ClassIsland 纯净版', desc: '课程表软件，高一很多班都在用。官方纯净版，需自行配置', icon: 'calendar_month--outlined', label: '官方', href: 'https://classisland.tech/' },
   { title: 'ClassIsland 2505配置版', desc: '内含南中秋季/春冬季时间表，但配置可能令老师不适，请谨慎使用', icon: 'calendar_month--outlined', label: '不推荐', href: 'https://www.123865.com/s/LQJuVv-eSeNd' },
   { title: 'ClassIsland 2506配置版', desc: '内含南中时间表，只保留核心功能，干净清爽', icon: 'calendar_month--outlined', label: '推荐', href: 'https://www.123865.com/s/LQJuVv-BieNd' },

@@ -10,8 +10,6 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/content": "^3.14.0",
-    "better-sqlite3": "^12.11.1",
     "mdui": "^2.1.4",
     "nuxt": "^3.12.0",
     "vue": "^3.4.0",

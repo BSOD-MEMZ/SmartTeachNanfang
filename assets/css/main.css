@@ -51,8 +51,7 @@ body {
 }
 
 /* 大标题：荆南波波黑（本身极粗，无需 font-weight） */
-.page-hero h1,
-.article-content h1 {
+.page-hero h1 {
   font-family: 'JingNanBoBoHei', 'FZLTY', sans-serif;
   font-weight: normal;
 }
@@ -99,23 +98,6 @@ body {
   gap: 0.75rem;
 }
 
-/* 文章内容 */
-.article-content {
-  max-width: 720px;
-  margin: 0 auto;
-  line-height: 1.8;
-  color: rgb(var(--mdui-color-on-surface));
-  font-size: 0.95rem;
-}
-.article-content h2 {
-  font-size: 1.15rem;
-  color: rgb(var(--mdui-color-primary));
-  margin: 1.5rem 0 0.75rem;
-}
-.article-content p {
-  margin: 0.75rem 0;
-}
-
 /* 高亮块 */
 .highlight-box {
   background: rgb(var(--mdui-color-primary-container));
@@ -136,11 +118,24 @@ body {
   cursor: pointer;
   border-radius: var(--mdui-shape-corner-medium);
   box-shadow: var(--mdui-elevation-3);
-  transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
+  /* 默认隐藏状态 */
+  opacity: 0;
+  transform: translateY(1.5rem) scale(0.85);
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.2, 0, 0, 1), transform 0.4s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.3s;
+}
+/* 显示状态 — 入场动画 */
+.fab-back-to-top.fab-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
 }
 .fab-back-to-top:hover {
   box-shadow: var(--mdui-elevation-4);
-  transform: scale(1.05);
+}
+/* hover 在可见状态下才生效 */
+.fab-back-to-top.fab-visible:hover {
+  transform: translateY(0) scale(1.05);
 }
 
 /* 暗色模式下平滑过渡 */

@@ -63,9 +63,9 @@
 
     <!-- 返回顶部 -->
     <img
-      v-show="showFab"
       src="/res/top.png"
       class="fab-back-to-top"
+      :class="{ 'fab-visible': showFab }"
       alt="返回顶部"
       @click="scrollToTop"
     />
@@ -87,7 +87,6 @@ const navItems = [
   { label: '首页', path: '/', icon: 'home' },
   { label: '资源', path: '/resources', icon: 'folder' },
   { label: '作品', path: '/showcase', icon: 'palette' },
-  { label: '文章', path: '/articles', icon: 'article' },
   { label: '学习', path: '/learn', icon: 'menu_book' },
   { label: '宣传', path: '/promo', icon: 'campaign' },
   { label: '导航', path: '/nav', icon: 'link' },

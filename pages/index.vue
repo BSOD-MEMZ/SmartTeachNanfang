@@ -96,31 +96,6 @@
         </mdui-button>
       </div>
 
-      <!-- 文章 — tertiary 琥珀色调 -->
-      <h3 class="section-heading" style="color:rgb(var(--mdui-color-tertiary))">
-        <mdui-icon name="article--outlined" style="color:rgb(var(--mdui-color-tertiary))"></mdui-icon>文章
-      </h3>
-      <div class="card-grid" style="margin-bottom:0.75rem">
-        <mdui-card clickable href="/articles/school-computer-management" style="background:rgb(var(--mdui-color-tertiary-container))">
-          <div style="padding:1rem; display:flex; align-items:flex-start; gap:0.75rem">
-            <mdui-icon name="description--outlined" style="font-size:2rem; color:rgb(var(--mdui-color-tertiary))"></mdui-icon>
-            <div>
-              <div style="font-weight:600; font-size:0.95rem">关于学校一体机管理制度的思考</div>
-              <div style="font-size:0.8rem; color:rgb(var(--mdui-color-on-tertiary-container)); margin-top:0.25rem">一名高一学生、七年"老电教"的深度思考</div>
-            </div>
-          </div>
-        </mdui-card>
-        <mdui-card clickable href="/articles/recover-usb-data">
-          <div style="padding:1rem; display:flex; align-items:flex-start; gap:0.75rem">
-            <mdui-icon name="sd_card--outlined" style="font-size:2rem; color:rgb(var(--mdui-color-tertiary))"></mdui-icon>
-            <div>
-              <div style="font-weight:600; font-size:0.95rem">用 DiskGenius 抢救U盘里的资料</div>
-              <div style="font-size:0.8rem; color:rgb(var(--mdui-color-on-surface-variant)); margin-top:0.25rem">实用数据恢复教程</div>
-            </div>
-          </div>
-        </mdui-card>
-      </div>
-
       <!-- 你知道吗 — secondary 青绿色调 -->
       <h3 class="section-heading" style="color:rgb(var(--mdui-color-secondary))">
         <mdui-icon name="lightbulb--outlined" style="color:rgb(var(--mdui-color-secondary))"></mdui-icon>你知道吗
