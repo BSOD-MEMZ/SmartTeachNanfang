@@ -12,7 +12,7 @@
       <p style="font-size: 0.875rem; color: rgb(var(--mdui-color-on-surface) / 0.6); padding: 1rem;">
         <mdui-icon name="lightbulb--outlined" style="font-size: 1rem; vertical-align: middle;"></mdui-icon>
         想投稿文章、作品吗？
-        <a href="https://github.com/BSOD-MEMZ/xxt85web" target="_blank" style="color: rgb(var(--mdui-color-primary)); font-weight: 600;">
+        <a href="https://github.com/BSOD-MEMZ/SmartTeachNanfang" target="_blank" style="color: rgb(var(--mdui-color-primary)); font-weight: 600;">
           给 GitHub 发 PR
         </a>
         就行，或者找 2505 班电教，或发邮件 xxt8582753@126.com

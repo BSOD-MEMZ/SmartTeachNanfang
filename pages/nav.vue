@@ -39,7 +39,7 @@
         </div>
       </mdui-card>
 
-      <mdui-card clickable href="https://github.com/BSOD-MEMZ/xxt85web" target="_blank" style="background:rgb(var(--mdui-color-primary-container));">
+      <mdui-card clickable href="https://github.com/BSOD-MEMZ/SmartTeachNanfang" target="_blank" style="background:rgb(var(--mdui-color-primary-container));">
         <div style="padding: 1.25rem; display: flex; align-items: center; gap: 1rem;">
           <mdui-icon name="code--outlined" style="font-size: 2rem; color: rgb(var(--mdui-color-primary));"></mdui-icon>
           <div>

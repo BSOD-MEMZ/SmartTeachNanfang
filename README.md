@@ -53,7 +53,7 @@ nanfang-site/
 
 ## 投稿
 
-想投稿文章或作品？给 [GitHub 仓库](https://github.com/BSOD-MEMZ/xxt85web) 发 PR，或联系 2505 班电教。
+想投稿文章或作品？给 [GitHub 仓库](https://github.com/BSOD-MEMZ/SmartTeachNanfang) 发 PR，或联系 2505 班电教。
 
 ## License
 

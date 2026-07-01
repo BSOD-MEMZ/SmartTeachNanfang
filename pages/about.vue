@@ -46,7 +46,7 @@
               <div style="font-size:0.8rem; color:rgb(var(--mdui-color-on-surface-variant))">xxt8582753@126.com</div>
             </div>
           </div>
-          <a href="https://github.com/BSOD-MEMZ/xxt85web" target="_blank" style="display:flex; align-items:center; gap:0.75rem; padding:0.25rem 0; text-decoration:none; color:inherit">
+          <a href="https://github.com/BSOD-MEMZ/SmartTeachNanfang" target="_blank" style="display:flex; align-items:center; gap:0.75rem; padding:0.25rem 0; text-decoration:none; color:inherit">
             <mdui-icon name="code--outlined" style="color:rgb(var(--mdui-color-tertiary)); flex-shrink:0"></mdui-icon>
             <div>
               <div style="font-weight:500">GitHub</div>
@@ -92,12 +92,11 @@
     <div style="margin-top:1rem; text-align:center; font-size:0.75rem; color:rgb(var(--mdui-color-on-surface-variant)); line-height:1.8; padding:1.5rem 0 2rem">
       <p style="margin:0 0 0.5rem">
         <mdui-icon name="gavel--outlined" style="font-size:0.875rem; vertical-align:middle; margin-right:0.25rem"></mdui-icon>
-        <strong>免责声明</strong>
+        <strong>严正声明</strong>
       </p>
       <p style="margin:0 0 1rem; max-width:600px; margin-left:auto; margin-right:auto">
         本站为株洲市南方中学学生自主搭建的非官方交流平台，与学校官方无关。<br />
-        资源区提供的第三方软件版权归原作者所有，仅供学习交流，请于下载后 24 小时内删除。<br />
-        本站不存储任何破解、盗版内容，所有链接均指向官方或第三方网盘。
+        平台能且仅能由学生自主管理，不受任何个人和组织的干扰
       </p>
       <p style="margin:0 0 0.5rem">
         <mdui-icon name="code--outlined" style="font-size:0.875rem; vertical-align:middle; margin-right:0.25rem"></mdui-icon>
@@ -105,11 +104,11 @@
       </p>
       <p style="margin:0 0 1rem">
         本站源代码在
-        <a href="https://github.com/BSOD-MEMZ/xxt85web" target="_blank" style="color:rgb(var(--mdui-color-primary)); font-weight:500">GitHub</a>
+        <a href="https://github.com/BSOD-MEMZ/SmartTeachNanfang" target="_blank" style="color:rgb(var(--mdui-color-primary)); font-weight:500">GitHub</a>
         开源（MIT 协议），欢迎提交 PR 贡献内容或修复问题。
       </p>
       <p style="margin:0; font-size:0.7rem; color:rgb(var(--mdui-color-on-surface) / 0.35)">
-        &copy; {{ new Date().getFullYear() }} SmartTeachNanfang · 智教南方 · 株洲市南方中学电教委员
+        &copy; {{ new Date().getFullYear() }} SmartTeachNanfang · 智教南方 - 株洲市南方中学 电教委员专题网站
       </p>
     </div>
   </div>

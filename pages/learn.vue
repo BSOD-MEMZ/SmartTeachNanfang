@@ -107,13 +107,32 @@ const duties = [
     ],
   },
   {
-    icon: 'update--outlined',
+    icon: 'file_open--outlined',
     title: 'WPS还是Office？',
     items: [
       'WPS免费但付费，Office付费但免费',
       'WPS教学使用卡的一批，Office性能好占用低，最重要的是Office触摸屏写字很丝滑',
       '一些老师用WPS做PPT，Office打开提示要修复，但是WPS兼容性就很好',
       '如果你们老师放PPT没遇到什么兼容性问题，无脑选择Office，通常建议Office 2019或更高版本'
+    ],
+  },
+  {
+    icon: 'screenshot_monitor--outlined',
+    title: '黑屏怎么办',
+    items: [
+      '如果是规律性的黑屏，显示无信号，那就是系统休眠导致的，打开Windows设置->系统->电源和睡眠，全部改成从不',
+      '如果黑屏是完全卡死，那就是磁盘空间不足导致虚拟内存不足，虚拟内存不足但物理内存吃满了，所以黑屏了，如果是这样，清理一下C盘，或者检查虚拟内存配置'
+    ],
+  },
+  {
+    icon: 'donut_large--outlined',
+    title: '清理C盘',
+    items: [
+      '去网站的资源中心下载一个叫Dism++的东西',
+      '找一个中午或者阳光体育，因为花的时间比较多，清理过程其实是可以正常使用电脑的，但是不建议，不然电脑会比较累',
+      '运行Dism++，点击空间回收，勾选上被取代的WinSxS组件、过期Appx应用、Windows报告事件更新安装记录、Installer目录，Installer基线缓存、损坏的Appx。下面的缓存文件全部勾选。应用程序那里全部勾选，临时文件全部勾选，然后直接点击清理',
+      '相信我，如果你是第一次清理，运气好可以释放十多个G，如果你觉得还不够，可以勾选CompactOS，硬链接合并，但是确实很慢',
+      '还不够？继续往下看'
     ],
   },
   {

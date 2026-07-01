@@ -138,7 +138,7 @@ const banners = [
   { src: '/res/banner1.jpg', alt: 'Banner 1', title: '2505 xxt8582753 - ClassIsland娱乐功能插件，让同学眼前一亮，老师眼前一黑。', link: 'https://forum.smart-teach.cn/d/2042' },
   { src: '/res/banner2.png', alt: 'Banner 2', title: '2506 AbCd - 一款自动登录希沃白板的小工具，通过模拟登录流程来实现自动登录。', link: 'https://easiauto.0xabcd.dev/' },
   { src: '/res/banner3.jpg', alt: 'Banner 3', title: '欢迎入群讨论，电教委员和普通技术爱好者都欢迎，科技高中就靠我们啦（？', },
-  { src: '/res/banner4.jpg', alt: 'Banner 4', title: '哪有这么好的免费服务器啊', },
+  // { src: '/res/banner4.jpg', alt: 'Banner 4', title: '哪有这么好的免费服务器啊', },
   { src: '/res/banner5.jpg', alt: 'Banner 5', title: '电子班牌破解 自由上网装软件', },
 ]
 
