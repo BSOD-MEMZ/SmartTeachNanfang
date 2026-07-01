@@ -86,9 +86,10 @@ usePageTheme()
 const navItems = [
   { label: '首页', path: '/', icon: 'home' },
   { label: '资源', path: '/resources', icon: 'folder' },
-  { label: '作品', path: '/showcase', icon: 'palette' },
   { label: '学习', path: '/learn', icon: 'menu_book' },
+  { label: '作品', path: '/showcase', icon: 'palette' },
   { label: '宣传', path: '/promo', icon: 'campaign' },
+  { label: '工具', path: '/tools', icon: 'construction' },
   { label: '导航', path: '/nav', icon: 'link' },
   { label: '关于', path: '/about', icon: 'info' }
 ]

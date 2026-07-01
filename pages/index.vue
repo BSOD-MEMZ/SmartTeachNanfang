@@ -27,8 +27,20 @@
       <div class="banner-carousel" style="margin-top:-5rem">
         <div class="banner-track" :style="{ transform: `translateX(-${currentBanner * 100}%)` }">
           <div v-for="(b, i) in banners" :key="i" class="banner-slide">
-            <img :src="b.src" :alt="b.alt" />
-            <div class="banner-caption" v-if="b.title">{{ b.title }}</div>
+            <a
+              v-if="b.link"
+              :href="b.link"
+              target="_blank"
+              mdui-ripple
+              style="display:block; position:relative; width:100%; height:100%; text-decoration:none; color:inherit; overflow:hidden"
+            >
+              <img :src="b.src" :alt="b.alt" />
+              <div class="banner-caption" v-if="b.title">{{ b.title }}</div>
+            </a>
+            <template v-else>
+              <img :src="b.src" :alt="b.alt" />
+              <div class="banner-caption" v-if="b.title">{{ b.title }}</div>
+            </template>
           </div>
         </div>
         <div class="banner-dots">
@@ -79,7 +91,8 @@
       <div class="card-grid" style="margin-bottom:0.75rem">
         <mdui-card v-for="w in works" :key="w.title" clickable :href="w.link" target="_blank">
           <div style="padding:1rem; display:flex; align-items:flex-start; gap:0.75rem">
-            <mdui-icon :name="w.icon" style="font-size:2rem; color:rgb(var(--mdui-color-primary))"></mdui-icon>
+            <img v-if="w.iconImg" :src="w.iconImg" alt="" style="width: 2.5rem; height: 2.5rem; object-fit: contain; flex-shrink: 0; border-radius: 0.375rem; margin-top: 0.125rem;" />
+            <mdui-icon v-else :name="w.icon" style="font-size:2rem; color:rgb(var(--mdui-color-primary))"></mdui-icon>
             <div>
               <div style="font-weight:600; font-size:0.95rem">{{ w.title }}</div>
               <div style="font-size:0.8rem; color:rgb(var(--mdui-color-on-surface-variant)); margin-top:0.25rem">{{ w.author }}</div>
@@ -122,10 +135,11 @@ const currentBanner = ref(0)
 let bannerTimer = null
 
 const banners = [
-  { src: '/res/banner1.jpg', alt: 'Banner 1', title: '2505 xxt8582753 - ClassIsland娱乐功能插件，让同学眼前一亮，老师眼前一黑。' },
-  { src: '/res/banner2.png', alt: 'Banner 2', title: '2506 AbCd - 一款自动登录希沃白板的小工具，通过模拟登录流程来实现自动登录。' },
-  { src: '/res/banner3.jpg', alt: 'Banner 3', title: '欢迎入群讨论，电教委员和普通技术爱好者都欢迎，科技高中就靠我们啦（？' },
-  { src: '/res/banner4.jpg', alt: 'Banner 4', title: '哪有这么好的免费服务器啊' },
+  { src: '/res/banner1.jpg', alt: 'Banner 1', title: '2505 xxt8582753 - ClassIsland娱乐功能插件，让同学眼前一亮，老师眼前一黑。', link: 'https://forum.smart-teach.cn/d/2042' },
+  { src: '/res/banner2.png', alt: 'Banner 2', title: '2506 AbCd - 一款自动登录希沃白板的小工具，通过模拟登录流程来实现自动登录。', link: 'https://easiauto.0xabcd.dev/' },
+  { src: '/res/banner3.jpg', alt: 'Banner 3', title: '欢迎入群讨论，电教委员和普通技术爱好者都欢迎，科技高中就靠我们啦（？', },
+  { src: '/res/banner4.jpg', alt: 'Banner 4', title: '哪有这么好的免费服务器啊', },
+  { src: '/res/banner5.jpg', alt: 'Banner 5', title: '电子班牌破解 自由上网装软件', },
 ]
 
 function nextBanner() {

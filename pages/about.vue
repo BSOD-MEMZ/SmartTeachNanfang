@@ -1,10 +1,16 @@
 <template>
-  <div class="page-container">
+  <div>
+    <!-- 全宽底纹（绝对定位，不占布局空间） -->
+    <div class="about-banner">
+      <img src="/res/aboutbanner.png" alt="" aria-hidden="true" />
+    </div>
+
+    <div class="page-container">
     <!-- 页头 -->
     <div class="page-hero">
       <mdui-icon name="info--outlined" style="color:rgb(var(--mdui-color-secondary));"></mdui-icon>
       <h1>关于本站</h1>
-      <p>南方中学电教委员的非官方小天地</p>
+      <p>智教南方 - SmartTeachNanfang</p>
     </div>
 
     <!-- 网站简介 -->
@@ -13,7 +19,7 @@
         <mdui-icon name="school--outlined"></mdui-icon>网站简介
       </h3>
       <p style="line-height:1.8; color:rgb(var(--mdui-color-on-surface-variant)); margin:0">
-        本站由南方中学电教委员自主搭建和维护，旨在为同学们提供一个技术交流、资源分享的平台。
+        本站由株洲市南方中学电教委员自主搭建和维护，旨在为同学们提供一个技术交流、资源分享的平台。
         这里汇集了电教委员们的自制作品、实用软件资源、技术教程，以及日常工作中积累的经验和技巧。
       </p>
     </mdui-card>
@@ -79,7 +85,34 @@
           </div>
         </div>
       </mdui-card>
+
     </div>
+
+    <!-- 底部声明 -->
+    <div style="margin-top:1rem; text-align:center; font-size:0.75rem; color:rgb(var(--mdui-color-on-surface-variant)); line-height:1.8; padding:1.5rem 0 2rem">
+      <p style="margin:0 0 0.5rem">
+        <mdui-icon name="gavel--outlined" style="font-size:0.875rem; vertical-align:middle; margin-right:0.25rem"></mdui-icon>
+        <strong>免责声明</strong>
+      </p>
+      <p style="margin:0 0 1rem; max-width:600px; margin-left:auto; margin-right:auto">
+        本站为株洲市南方中学学生自主搭建的非官方交流平台，与学校官方无关。<br />
+        资源区提供的第三方软件版权归原作者所有，仅供学习交流，请于下载后 24 小时内删除。<br />
+        本站不存储任何破解、盗版内容，所有链接均指向官方或第三方网盘。
+      </p>
+      <p style="margin:0 0 0.5rem">
+        <mdui-icon name="code--outlined" style="font-size:0.875rem; vertical-align:middle; margin-right:0.25rem"></mdui-icon>
+        <strong>开源性声明</strong>
+      </p>
+      <p style="margin:0 0 1rem">
+        本站源代码在
+        <a href="https://github.com/BSOD-MEMZ/xxt85web" target="_blank" style="color:rgb(var(--mdui-color-primary)); font-weight:500">GitHub</a>
+        开源（MIT 协议），欢迎提交 PR 贡献内容或修复问题。
+      </p>
+      <p style="margin:0; font-size:0.7rem; color:rgb(var(--mdui-color-on-surface) / 0.35)">
+        &copy; {{ new Date().getFullYear() }} SmartTeachNanfang · 智教南方 · 株洲市南方中学电教委员
+      </p>
+    </div>
+  </div>
   </div>
 </template>
 
@@ -92,5 +125,28 @@ useHead({
 const authors = [
   { name: 'xxt8582753', role: '主要开发者', class: '2505' },
   { name: 'AbCd', role: '开发者', class: '2506' },
+  { name: 'Cookie', role: '南方信息拓展社社长', class: '2524' },
+  { name: 'Imgreenhand', role: '古法编程大手子', class: '2511' },
+  { name: 'Kingstar', role: '高级军官', class: '2517' },
 ]
 </script>
+
+<style scoped>
+.about-banner {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+.about-banner img {
+  width: 100%;
+  display: block;
+}
+.page-container {
+  position: relative;
+  z-index: 1;
+}
+</style>

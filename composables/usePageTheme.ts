@@ -3,9 +3,10 @@
 
 const pageColors: Record<string, string> = {
   '/': '#39C5BB',           // 首页 — 青绿色（不变）
-  '/resources': '#F43F5E',  // 资源 — 玫红
+  '/resources': '#F97316',  // 资源 — 暖橙
   '/showcase': '#8B5CF6',   // 作品 — 紫罗兰
   '/promo': '#3B82F6',      // 宣传 — 宝蓝
+  '/tools': '#F59E0B',      // 工具 — 琥珀
   '/nav': '#10B981',        // 导航 — 翠绿
   '/about': '#6366F1',      // 关于 — 靛蓝
   '/learn': '#0EA5E9',      // 学习 — 天蓝

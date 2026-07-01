@@ -23,7 +23,8 @@
     <div class="card-grid">
       <mdui-card v-for="w in works" :key="w.title" clickable :href="w.link" target="_blank">
         <div style="padding: 1.25rem; display: flex; align-items: center; gap: 1rem;">
-          <mdui-icon :name="w.icon" style="font-size: 2rem; color: rgb(var(--mdui-color-primary));"></mdui-icon>
+          <img v-if="w.iconImg" :src="w.iconImg" alt="" style="width: 2.5rem; height: 2.5rem; object-fit: contain; flex-shrink: 0; border-radius: 0.375rem;" />
+          <mdui-icon v-else :name="w.icon" style="font-size: 2rem; color: rgb(var(--mdui-color-primary)); flex-shrink: 0;"></mdui-icon>
           <div>
             <div style="font-weight: 600; font-size: 1rem;">{{ w.title }}</div>
             <div style="font-size: 0.8rem; color: rgb(var(--mdui-color-on-surface) / 0.5);">{{ w.desc }}</div>
