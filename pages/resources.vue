@@ -62,8 +62,8 @@ const sections = [
     icon: 'school--outlined',
     color: 'primary',
     items: [
-      { title: '希沃全家桶下载', desc: '希沃白板，希沃视频展台，希沃授课助手等', icon: 'calendar_month--outlined', iconImg: '/res/icon/easinote.ico', label: '官方', href: 'https://e.seewo.com/' },
-      { title: '维词教学系统', desc: '官方下载', icon: 'assignment--outlined', iconImg: '/res/icon/weici.ico',href: 'http://www.weixuetec.com/#/' },
+      { title: '希沃全家桶下载', desc: '希沃白板，希沃视频展台，希沃授课助手等', icon: 'calendar_month--outlined', iconImg: '/res/icon/easinote.png', label: '官方', href: 'https://e.seewo.com/' },
+      { title: '维词教学系统', desc: '官方下载', icon: 'assignment--outlined', iconImg: '/res/icon/weici.png',href: 'http://www.weixuetec.com/#/' },
     ]
   },
   {
@@ -73,7 +73,7 @@ const sections = [
     items: [
       { title: 'ClassIsland 纯净版', desc: '课程表软件，高一很多班都在用。官方纯净版，需自行配置', icon: 'calendar_month--outlined', iconImg: '/res/icon/classisland.png', label: '官方', href: 'https://classisland.tech/' },
       { title: 'ClassIsland 2506 配置版', desc: '自带南方中学两个季节的时间表，根据学校实际情况进行了修改，开箱即用，推荐使用', icon: 'calendar_month--outlined', iconImg: '/res/icon/classisland.png', href: 'https://1813038527.share.123pan.cn/123pan/LQJuVv-v32Dd' },
-      { title: 'ClassWork 作业板', desc: '打开即用的作业管理工具', icon: 'assignment--outlined', iconImg: '/res/icon/classwork.ico',label: '即开即用', href: 'https://classworks.wuyuan.dev/' },
+      { title: 'ClassWork 作业板', desc: '打开即用的作业管理工具', icon: 'assignment--outlined', iconImg: '/res/icon/classwork.png',label: '即开即用', href: 'https://classworks.wuyuan.dev/' },
     ]
   },
   {
@@ -81,10 +81,10 @@ const sections = [
     icon: 'cleaning_services--outlined',
     color: 'secondary',
     items: [
-      { title: 'Geek Uninstaller', desc: '强制卸载流氓软件，清除残留注册表和文件', icon: 'delete--outlined', iconImg: '/res/icon/geek.ico', href: '/res/files/geek.exe', download: 'geek.exe' },
-      { title: 'Dism++', desc: 'C盘空间清理神器，还能管理系统更新和驱动', icon: 'cleaning_services--outlined',iconImg: '/res/icon/dism.ico', href: 'https://www.123865.com/s/LQJuVv-2leNd' },
-      { title: 'Everything', desc: '快速搜索文件，比Windows自带搜索快N倍', icon: 'search--outlined', iconImg: '/res/icon/everything.ico', href: 'https://www.voidtools.com/zh-cn/downloads/' },
-      { title: 'Windows Update Blocker', desc: '禁用烦人的 Windows 自动更新，防止上课时突然重启', icon: 'block--outlined',iconImg: '/res/icon/wub.ico', href: 'https://www.sordum.org/9470/windows-update-blocker-v1-8/', download: undefined },
+      { title: 'Geek Uninstaller', desc: '强制卸载流氓软件，清除残留注册表和文件', icon: 'delete--outlined', iconImg: '/res/icon/geek.png', href: '/res/files/geek.exe', download: 'geek.exe' },
+      { title: 'Dism++', desc: 'C盘空间清理神器，还能管理系统更新和驱动', icon: 'cleaning_services--outlined',iconImg: '/res/icon/dism.png', href: 'https://1813038527.share.123pan.cn/123pan/LQJuVv-VtDDd' },
+      { title: 'Everything', desc: '快速搜索文件，比Windows自带搜索快N倍', icon: 'search--outlined', iconImg: '/res/icon/everything.png', href: 'https://www.voidtools.com/zh-cn/downloads/' },
+      { title: 'Windows Update Blocker', desc: '禁用烦人的 Windows 自动更新，防止上课时突然重启', icon: 'block--outlined',iconImg: '/res/icon/wub.png', href: 'https://www.sordum.org/9470/windows-update-blocker-v1-8/', download: undefined },
     ]
   },
   {
@@ -92,9 +92,9 @@ const sections = [
     icon: 'apps--outlined',
     color: 'tertiary',
     items: [
-      { title: '7-Zip', desc: '开源免费的压缩解压软件，无广告无捆绑', icon: 'folder_zip--outlined', href: 'https://www.7-zip.org/' },
-      { title: 'K-Lite Codec Pack', desc: '解决视频无法播放', icon: 'movie--outlined',  href: 'https://www.123865.com/s/LQJuVv-zSeNd' },
-      { title: 'Google Chrome', desc: '备用浏览器，其实Edge完全够用', icon: 'language--outlined',href: 'https://1813038527.share.123pan.cn/123pan/LQJuVv-q4wDd' },
+      { title: '7-Zip', desc: '开源免费的压缩解压软件，无广告无捆绑', icon: 'folder_zip--outlined', iconImg: '/res/icon/7z.png',href: 'https://www.7-zip.org/' },
+      { title: 'K-Lite Codec Pack', desc: '解决视频无法播放', icon: 'movie--outlined',  iconImg: '/res/icon/klite.png',href: 'https://www.123865.com/s/LQJuVv-zSeNd' },
+      { title: 'Google Chrome', desc: '备用浏览器，其实Edge完全够用', icon: 'language--outlined',iconImg: '/res/icon/chrome.png',href: 'https://1813038527.share.123pan.cn/123pan/LQJuVv-q4wDd' },
     ]
   },
 

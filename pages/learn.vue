@@ -4,12 +4,11 @@
     <div class="page-hero">
       <mdui-icon name="menu_book--outlined" style="color:rgb(var(--mdui-color-secondary));"></mdui-icon>
       <h1>学习园地</h1>
-      <p>从入门到熟练，做一名靠谱的电教委员</p>
+      <p>了解电教相关知识</p>
     </div>
 
-    <!-- ====== 第一部分：作为电教委员，我们应做什么 ====== -->
     <h3 class="section-heading" style="color:rgb(var(--mdui-color-primary))">
-      <mdui-icon name="assignment--outlined" style="color:rgb(var(--mdui-color-primary))"></mdui-icon>作为电教委员，我们应做什么
+      <mdui-icon name="assignment--outlined" style="color:rgb(var(--mdui-color-primary))"></mdui-icon>一些常识
     </h3>
     <div class="card-grid" style="margin-bottom:2rem">
       <mdui-card v-for="duty in duties" :key="duty.title" clickable style="background:rgb(var(--mdui-color-primary-container))">
@@ -25,7 +24,6 @@
       </mdui-card>
     </div>
 
-    <!-- ====== 第二部分：常见故障解决方法 ====== -->
     <h3 class="section-heading" style="color:rgb(var(--mdui-color-tertiary))">
       <mdui-icon name="build--outlined" style="color:rgb(var(--mdui-color-tertiary))"></mdui-icon>常见故障解决方法
     </h3>
@@ -111,9 +109,9 @@ const duties = [
     title: 'WPS还是Office？',
     items: [
       'WPS免费但付费，Office付费但免费',
-      'WPS教学使用卡的一批，Office性能好占用低，最重要的是Office触摸屏写字很丝滑',
+      'Office性能好占用低，最重要的是Office触摸屏写字很丝滑',
       '一些老师用WPS做PPT，Office打开提示要修复，但是WPS兼容性就很好',
-      '如果你们老师放PPT没遇到什么兼容性问题，无脑选择Office，通常建议Office 2019或更高版本'
+      '如果你们老师放PPT没遇到什么兼容性问题就用Office，通常建议Office 2019或更高版本。如果有兼容性问题，可以考虑换WPS'
     ],
   },
   {
@@ -155,7 +153,6 @@ const qas = [
       '检查一体机输入源按钮，确认选中了正确的输入源（PC）',
       '轻触屏幕，如果是Windows自动休眠，建议关闭',
     ],
-    tip: '大部分"黑屏"是输入源被误切造成的。',
   },
 
   {
@@ -164,6 +161,13 @@ const qas = [
       '先用干净的软布擦拭屏幕四周的边框',
       '检查屏幕角落是否有异物卡在触摸框感应区',
       '检查屏幕上是否有蚊虫',
+    ],
+  },
+  {
+    q: '为什么不推荐同时安装Office和WPS',
+    steps: [
+      '同时安装多种办公软件会导致COM组件互相冲突，像希沃那个翻页的东西（PPT小工具）就是需要COM组件支持',
+      '系统通过CLSID定位具体组件，当系统同时安装Microsoft Office与WPS Office时，两者均会向注册表写入自动化接口，导致COM组件映射关系被覆盖，从而产生调用异常，也就是希沃小工具打不开之类的'
     ],
   },
   {
@@ -179,7 +183,7 @@ const qas = [
       '打开控制面板 → 程序和功能，按安装时间排序，卸载最近安装的可疑软件',
       '删掉电脑上的杀毒软件，金山毒霸，360，火绒都不要有，首先现在的电脑没那么容易中毒，其次这些杀毒软件的后台扫描很吃性能的！',
     ],
-    tip: '预防胜于治疗：不要从非官网下载软件，安装时看清楚勾选框，拒绝捆绑安装。',
+    tip: '不要从非官网下载软件，安装时看清楚勾选框，拒绝捆绑安装。',
   },
   {
     q: '希沃白板登录不了，一直显示网络错误',
@@ -205,7 +209,6 @@ const qas = [
       '如果不是本机网卡问题，那就只能是学校垃圾WiFi发力了。'
     ],
   },
-
   {
     q: '清理C盘',
     steps: [
