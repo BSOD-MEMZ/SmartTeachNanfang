@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2026-06-23',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: [],
   vue: {
     compilerOptions: {
@@ -18,7 +18,7 @@ export default defineNuxtConfig({
         { name: 'description', content: '株洲市南方中学电教委员交流中心' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', href: '/res/logo.png' },
         // Material Icons（mdui-icon 组件使用）
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons+Outlined' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }

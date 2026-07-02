@@ -73,7 +73,7 @@
       <!-- 作者列表 -->
       <mdui-card clickable style="padding:1.25rem 1rem">
         <h3 class="section-heading" style="color:rgb(var(--mdui-color-primary)); margin-top:0">
-          <mdui-icon name="people--outlined"></mdui-icon>作者
+          <mdui-icon name="people--outlined"></mdui-icon>贡献者
         </h3>
         <div style="display:flex; flex-direction:column; gap:0.25rem">
           <div v-for="author in authors" :key="author.name" style="display:flex; align-items:center; justify-content:space-between; padding:0.35rem 0">
@@ -108,7 +108,7 @@
         开源（MIT 协议），欢迎提交 PR 贡献内容或修复问题。
       </p>
       <p style="margin:0; font-size:0.7rem; color:rgb(var(--mdui-color-on-surface) / 0.35)">
-        &copy; {{ new Date().getFullYear() }} SmartTeachNanfang · 智教南方 - 株洲市南方中学 电教委员专题网站
+        &copy; 2025-{{ new Date().getFullYear() }} SmartTeachNanfang · 智教南方 - 株洲市南方中学 电教委员专题网站 | 通讯地址：株洲市南方中学 2505班
       </p>
     </div>
   </div>

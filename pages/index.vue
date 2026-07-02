@@ -64,12 +64,17 @@
         ></mdui-button-icon>
       </div>
 
-      <!-- 最新消息 — secondary 青绿色调 -->
+      <!-- 最新消息 — secondary 青绿色调
       <h3 class="section-heading" style="color:rgb(var(--mdui-color-secondary))">
         <mdui-icon name="new_releases--outlined" style="color:rgb(var(--mdui-color-secondary))"></mdui-icon>最新消息
       </h3>
       <mdui-list style="border-radius:var(--mdui-shape-corner-medium); margin-bottom:1rem; background:rgb(var(--mdui-color-secondary-container))">
-        <mdui-list-item headline="ExitBoard2 静态编译完成并开放下载" noninteractive>
+        <mdui-list-item headline="2026/7/1 EasiAuto 新增二维码登录、进程注入" noninteractive>
+          <mdui-icon slot="icon" name="smart_toy--outlined" style="color:rgb(var(--mdui-color-secondary))"></mdui-icon>
+          <div slot="description"></div>
+        </mdui-list-item>
+        <mdui-divider></mdui-divider>
+        <mdui-list-item headline="2025/10/8 ExitBoard2 静态编译完成并开放下载" noninteractive>
           <mdui-icon slot="icon" name="download--outlined" style="color:rgb(var(--mdui-color-secondary))"></mdui-icon>
           <div slot="description" style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center">
             <mdui-chip variant="suggestion" href="/files/ExitBoard2_win32.exe">下载安装包</mdui-chip>
@@ -77,12 +82,9 @@
             <span style="font-size:0.75rem">不会装？进群看教程或找程序作者 2505xxt</span>
           </div>
         </mdui-list-item>
-        <mdui-divider></mdui-divider>
-        <mdui-list-item headline="EasiAuto 新增 UI Automation" noninteractive>
-          <mdui-icon slot="icon" name="smart_toy--outlined" style="color:rgb(var(--mdui-color-secondary))"></mdui-icon>
-          <div slot="description">自动定位页面元素，防止屏幕键盘遮住输入框导致 OpenCV 识别失效</div>
-        </mdui-list-item>
-      </mdui-list>
+         
+        
+      </mdui-list>-->
 
       <!-- 作品展示 — primary 珊瑚色调 -->
       <h3 class="section-heading" style="color:rgb(var(--mdui-color-primary))">
@@ -97,7 +99,7 @@
               <div style="font-weight:600; font-size:0.95rem">{{ w.title }}</div>
               <div style="font-size:0.8rem; color:rgb(var(--mdui-color-on-surface-variant)); margin-top:0.25rem">{{ w.author }}</div>
               <div v-if="w.badge" style="margin-top:0.35rem">
-                <mdui-chip variant="suggestion" style="font-size:0.65rem; height:1.25rem">{{ w.badge }}</mdui-chip>
+                <mdui-chip variant="suggestion" style="font-size:0.65rem; height:auto; min-height:1.25rem; white-space:normal; word-break:break-all; line-height:1.3; padding:0.15rem 0">{{ w.badge }}</mdui-chip>
               </div>
             </div>
           </div>

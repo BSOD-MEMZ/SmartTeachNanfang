@@ -44,7 +44,7 @@
           <mdui-icon name="code--outlined" style="font-size: 2rem; color: rgb(var(--mdui-color-primary));"></mdui-icon>
           <div>
             <div style="font-weight: 600; font-size: 1rem;">GitHub 仓库</div>
-            <div style="font-size: 0.75rem; color: rgb(var(--mdui-color-on-surface) / 0.4); margin-top: 0.25rem;">github.com/BSOD-MEMZ/xxt85web</div>
+            <div style="font-size: 0.75rem; color: rgb(var(--mdui-color-on-surface) / 0.4); margin-top: 0.25rem;">github.com/BSOD-MEMZ/SmartTeachNanfang</div>
           </div>
         </div>
       </mdui-card>

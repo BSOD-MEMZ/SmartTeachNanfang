@@ -30,7 +30,7 @@
             <div style="font-size: 0.8rem; color: rgb(var(--mdui-color-on-surface) / 0.5);">{{ w.desc }}</div>
             <div style="font-size: 0.75rem; color: rgb(var(--mdui-color-on-surface) / 0.4); margin-top: 0.25rem;">{{ w.author }}</div>
             <div v-if="w.badge" style="margin-top:0.35rem">
-              <mdui-chip variant="suggestion" style="font-size:0.65rem; height:1.25rem">{{ w.badge }}</mdui-chip>
+              <mdui-chip variant="suggestion" style="font-size:0.65rem; height:auto; min-height:1.25rem; white-space:normal; word-break:break-all; line-height:1.3; padding:0.15rem 0">{{ w.badge }}</mdui-chip>
             </div>
           </div>
         </div>
