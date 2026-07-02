@@ -16,7 +16,7 @@
         ></span>
         <div style="text-align:left">
           <h1 style="margin:0; font-size:1.35rem; line-height:1.3">株洲市南方中学 电教委员专题网站</h1>
-          <p style="margin:0.25rem 0 0; font-size:0.85rem">非官方平台 · 学生自主维护 · 技术交流分享</p>
+          <p style="margin:0.25rem 0 0; font-size:0.85rem">班级电脑维护技术交流分享</p>
         </div>
       </div>
     </div>
